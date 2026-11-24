@@ -9,7 +9,7 @@
     "lint": "vp lint",
     "format": "vp fmt",
     "preview": "node dist/main",
-    "test": "vp test"
+    "test": "vp test --passWithNoTests"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",

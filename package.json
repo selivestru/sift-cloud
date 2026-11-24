@@ -8,7 +8,7 @@
   ],
   "type": "module",
   "scripts": {
-    "ready": "vp check && vp run -r test --passWithNoTests && vp run -r build",
+    "ready": "vp check && vp run -r test && vp run -r build",
     "api:dev": "vp run api#dev",
     "web:dev": "vp run web#dev"
   },

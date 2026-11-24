@@ -21,7 +21,7 @@ export default defineConfig({
     sortPackageJson: true,
     overrides: [
       {
-        files: ['apps/app/**'],
+        files: ['apps/web/**'],
         options: {
           sortTailwindcss: true,
         },
@@ -34,6 +34,14 @@ export default defineConfig({
     rules: { 'vite-plus/prefer-vite-plus-imports': 'error' },
     options: { typeAware: true, typeCheck: true },
     overrides: [
+      {
+        files: ['apps/web/**'],
+        plugins: ['react', 'oxc'],
+        rules: {
+          'react/rules-of-hooks': 'error',
+          'react/only-export-components': ['warn', { allowConstantExport: true }],
+        },
+      },
       {
         files: ['apps/api/**'],
         rules: {
